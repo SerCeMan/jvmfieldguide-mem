@@ -1,0 +1,38 @@
+.idea/**
+.idea
+*.iml
+*.ipr
+out/
+*.jar
+*.class
+*.so
+
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
+# Java heap dump, Eclipse MAT
+*.hprof
+*.index
+*.threads
+*_Leak_Suspects.zip
+heapdump.hprof.*
+
+*gc.log
+*gc.log.*
+hs_err_pid*
+*.jfr
+
+.attach_pid*
+
+# flamegraphs
+*.html
+
+
+
+# JNI
+allocvirt1
