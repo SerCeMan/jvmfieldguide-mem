@@ -17,7 +17,9 @@ error() {
 
 run() {
   local names
-  names=$(docker ps --format "{{.Names}} {{.Image}}")
+  set +e
+  names=$(docker ps --format "{{.Names}} {{.Image}}" | grep jvmmemfieldguide)
+  set -e
   if [[ "${names}" =~ .*jvmmemfieldguide.* ]]; then
     docker exec -it "${names% *}" $@
   else
